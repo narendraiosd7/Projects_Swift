@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WYy-gV-hz6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAq-vb-KlP">
+            <objects>
+                <tableViewController id="rgE-pr-kMu" customClass="ViewController" customModule="Project_1_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HTq-AI-Ki5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Image" textLabel="QD1-OQ-FB6" style="IBUITableViewCellStyleDefault" id="Z4K-xr-O0B">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z4K-xr-O0B" id="g2Y-RI-rYp">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QD1-OQ-FB6">
+                                            <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rgE-pr-kMu" id="vfQ-ta-mGh"/>
+                            <outlet property="delegate" destination="rgE-pr-kMu" id="PWo-kt-TNy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="A14-fo-SGX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwb-7Q-EIm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296" y="123"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="W5R-FP-lCu">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DXp-hh-5Pb" customClass="DetailsViewController" customModule="Project_1_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wgJ-xo-dZ6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tLA-xc-uyD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JSy-Ia-vKY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tLA-xc-uyD" firstAttribute="top" secondItem="wgJ-xo-dZ6" secondAttribute="top" id="MVH-eb-U8A"/>
+                            <constraint firstAttribute="bottom" secondItem="tLA-xc-uyD" secondAttribute="bottom" id="Wp0-xb-OdI"/>
+                            <constraint firstItem="tLA-xc-uyD" firstAttribute="leading" secondItem="wgJ-xo-dZ6" secondAttribute="leading" id="Ybx-Rj-wZN"/>
+                            <constraint firstAttribute="trailing" secondItem="tLA-xc-uyD" secondAttribute="trailing" id="xGq-0a-8wX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="tLA-xc-uyD" id="zx1-LU-KsF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8B-Q2-LCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962" y="123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ejx-f5-ijp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WYy-gV-hz6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I2B-HZ-DeE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rgE-pr-kMu" kind="relationship" relationship="rootViewController" id="5if-Ak-hcy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1H-VS-E6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357.97101449275362" y="122.54464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
